@@ -16,9 +16,9 @@ export const AddTodo = ({ todos, setTodos, index, update, setUpdate }) => {
             children: [],
           },
         ];
-        item.children = newTodo;
+        return (item.children = newTodo);
       } else {
-        addTodoRecursive(item.children, index, value);
+        return addTodoRecursive(item.children, index, value);
       }
     });
     setValue('');
